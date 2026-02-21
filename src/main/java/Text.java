@@ -19,20 +19,20 @@ public class Text {
         return numberOfLetters;
     }
 
-    public String sort(char l){
-        String[] splited = this.text.split(" ");
+    public String sort(char l) {
+        final String[] splited = this.text.split(" ");
 
         for (int i = 1; i < splited.length; i++) {
-            int numberOfLettersI = getNumberOfLetters(l, splited[i]);
+            final int numberOfLettersI = getNumberOfLetters(l, splited[i]);
             for (int c = 0; c < i; c++) {
-                int numberOfLettersC = getNumberOfLetters(l, splited[c]);
+                final int numberOfLettersC = getNumberOfLetters(l, splited[c]);
                 if (numberOfLettersI < numberOfLettersC) {
-                    String temp = splited[c];
+                    final String temp = splited[c];
                     splited[c] = splited[i];
-                    for (int d = i; d > c+1; d--) {
-                        splited[d] = splited[d-1];
+                    for (int d = i; d > c + 1; d--) {
+                        splited[d] = splited[d - 1];
                     }
-                    splited[c+1] = temp;
+                    splited[c + 1] = temp;
                     break;
                 }
             }
