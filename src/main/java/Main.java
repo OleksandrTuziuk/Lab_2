@@ -6,18 +6,25 @@ public class Main {
     static void main(String[] args) {
         System.out.println("Введіть текст: ");
         final String string = sc.nextLine();
+        char l;
         while (true) {
-            System.out.println("Введіть символ за яким буде відбуватись сортування: ");
+            System.out.print("Введіть символ за яким буде відбуватись сортування: ");
             final String letter = sc.nextLine();
             if (letter.length() > 1) {
                 System.out.println("Введено декілька символів");
                 continue;
             }
+            else if (letter.isEmpty()) {
+                System.out.println("Символ не введений");
+                continue;
+            }
+            l = letter.toCharArray()[0];
             break;
         }
 
         final Text text = new Text(string);
 
-        System.out.println(text.sort('a'));
+        System.out.println("Відсортований текст:");
+        System.out.println(text.sort(l));
     }
 }
