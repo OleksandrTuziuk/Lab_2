@@ -13,8 +13,7 @@ public class Main {
             if (letter.length() > 1) {
                 System.out.println("Введено декілька символів");
                 continue;
-            }
-            else if (letter.isEmpty()) {
+            } else if (letter.isEmpty()) {
                 System.out.println("Символ не введений");
                 continue;
             }
